@@ -1,0 +1,17 @@
+{
+    "name": "ProjectGenarator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "generator.js",
+    "scripts": {
+      "test": "mocha ./spec/"
+    },
+    "devDependencies": {
+      "chai": "^3.5.0",
+      "eslint": "^3.15.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  

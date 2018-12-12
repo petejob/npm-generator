@@ -1,7 +1,7 @@
-#!/usr/bin/env/ node
+#!/usr/bin/env node
 const fs = require('fs');
 
-fs.mkdir('projects', err => {
+fs.mkdir(`${__dirname}/projects`, err => {
   if (err) throw err;
   console.log('The projects directory has been created');
   fs.writeFile('projects/index.js', '', err => {
