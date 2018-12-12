@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 const fs = require('fs');
 
-fs.mkdir(`${__dirname}/projects`, err => {
+fs.mkdir(`${process.cwd()}/projects`, err => {
   if (err) throw err;
   console.log('The projects directory has been created');
   fs.writeFile('projects/index.js', '', err => {
     if (err) throw err;
     console.log('File index.js has been created successfully!');
   });
-  fs.mkdir('projects/spec', err => {
+  fs.mkdir(`${process.cwd()}/projects/spec`, err => {
     if (err) throw err;
     console.log('The spec directory has been created');
     fs.writeFile(
-      'projects/spec/index.spec.js',
+      `${process.cwd()}/projects/spec/index.spec.js`,
       'const chai = require("chai");',
       err => {
         if (err) throw err;
@@ -20,12 +20,12 @@ fs.mkdir(`${__dirname}/projects`, err => {
       }
     );
   });
-  fs.writeFile('projects/.gitignore', '', err => {
+  fs.writeFile(`${process.cwd()}/projects/.gitignore`, '', err => {
     if (err) throw err;
     console.log('File .gitignore has been created successfully!');
   });
   fs.writeFile(
-    'projects/package.json',
+    `${process.cwd()}/projects/package.json`,
     `{
     "name": "ProjectGenarator",
     "version": "1.0.0",
@@ -48,7 +48,7 @@ fs.mkdir(`${__dirname}/projects`, err => {
       console.log('File package.json has been created successfully!');
     }
   );
-  fs.writeFile('projects/READ.md', '', err => {
+  fs.writeFile(`${process.cwd()}/projects/READ.md`, '', err => {
     if (err) throw err;
     console.log('File READ.md has been created successfully!');
   });
