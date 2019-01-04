@@ -43,7 +43,7 @@ function createProject(projectName) {
     fs.writeFile(
       `${process.cwd()}/${projectName}/package.json`,
       `{
-      "name": `${projectName}`,
+      "name": "${projectName}",
       "version": "1.0.0",
       "description": "",
       "main": "generator.js",
